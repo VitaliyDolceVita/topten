@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"
+    <title>TOP 10 CRYPTOCOINS</title>
+ <style>
+        body {
+            font-family: sans-serif;
+            background-color: #00a22e;<!-- fon-->
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 2em;
+	    color: white;
+        }
+
+        table {
+            margin: 2em auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 0.5em 1em;
+            text-align: left;
+        }
+
+        th {
+            background-color: #006f20;  <!-- verhyshka tabluci-->
+            font-weight: bold;
+            border-bottom: 2px solid #ddd;
+		color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #a2ffbd;<!--parni riadku-->
+        }
+    </style>
+   
+    
+</head>
+<body>
+    <h1>TOP 10 CRYPTOCOINS</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for coin in coins %}
+                <tr>
+                    <td>{{ coin.name }}</td>
+                    <td>{{ coin.symbol }}</td>
+                    <td>{{ coin.price }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
