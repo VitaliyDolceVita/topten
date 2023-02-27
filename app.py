@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    api_key = "4d2bd61d-2e26-44de-a28c-6bccabad5e47"
+    api_key = ""
     url = f"https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=10&convert=USD"
 
     headers = {
